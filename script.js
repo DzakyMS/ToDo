@@ -5,10 +5,7 @@ const tabelTodo = document.querySelector("#tabel-todo")
 
 
 const style = "col-1 bg-info-subtle border-dark border"
-let modeEdit = {
-    aktif: false,
-    row: null
-}
+
 
 function urutkan() {
     let angka = 1;
