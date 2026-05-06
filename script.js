@@ -5,6 +5,8 @@ const tabelTodo = document.querySelector("#tabel-todo")
 
 
 const style = "col-1 bg-info-subtle border-dark border"
+const styleTombolHapus = "bg-danger text-dark border border-dark"
+const styleTombolEdit = "bg-warning text-dark border border-dark"
 
 
 function urutkan() {
@@ -41,6 +43,7 @@ function simpanData() {
 
     const tombolHapus = document.createElement('input');
     tombolHapus.type = 'button'; tombolHapus.value = 'hapus';
+    tombolHapus.className = styleTombolHapus;
     tombolHapus.addEventListener('click', () => { 
         row.remove();
         urutkan();
@@ -48,6 +51,7 @@ function simpanData() {
 
     const tombolEdit = document.createElement('input');
     tombolEdit.type = 'button'; tombolEdit.value = 'edit';
+    tombolEdit.className = styleTombolEdit;
     tombolEdit.addEventListener('click', () => {
         const dataEdit = {
             aktivitas: inputAktivitas.value,
